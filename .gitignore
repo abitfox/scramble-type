@@ -1,0 +1,20 @@
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+
+# 本地项目文档（技术方案/实现说明），不随开源仓库分发
+/docs/
+
+# vite
+playground/.vite/
+
+# vitepress
+docs-site/.vitepress/cache/
+docs-site/.vitepress/dist/
+
+# editor
+.idea/
+.vscode/
+*.tsbuildinfo

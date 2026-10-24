@@ -1,0 +1,151 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, "Cascadia Mono", Consolas, Menlo, monospace;
+  background: #0a0f10;
+  color: #c8d6d8;
+}
+
+.pg {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+.pg-header {
+  margin-bottom: 28px;
+}
+
+.pg-title {
+  font-size: 40px;
+  letter-spacing: 4px;
+  color: #7ee2a8;
+  text-shadow: 0 0 18px rgba(126, 226, 168, 0.45);
+}
+
+.pg-sub {
+  color: #5f7477;
+  margin: 8px 0 0;
+}
+
+.pg-panel {
+  border: 1px solid #1e3236;
+  background: #0d1517;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.pg-panel h2 {
+  margin: 0 0 16px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #5f7477;
+  text-transform: uppercase;
+}
+
+.pg-stage {
+  border: 1px solid #16292d;
+  border-radius: 8px;
+  background: #080d0e;
+  padding: 24px 20px;
+  margin-bottom: 16px;
+  min-height: 72px;
+}
+
+.pg-big {
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.pg-terminal {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.pg-terminal p {
+  margin: 0;
+}
+
+.pg-acc {
+  color: #7ee2a8;
+  text-shadow: 0 0 12px rgba(126, 226, 168, 0.35);
+}
+
+.pg-dim {
+  color: #46585b;
+}
+
+.pg-status {
+  color: #46585b;
+  font-size: 12px;
+  margin: 12px 0 0;
+}
+
+.pg-btns {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.pg-btns button,
+.pg-controls button {
+  background: #12262a;
+  color: #9fd6b5;
+  border: 1px solid #1e3236;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.pg-btns button:hover {
+  background: #17333a;
+}
+
+.pg-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px 20px;
+  font-size: 13px;
+}
+
+.pg-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #7d9599;
+}
+
+.pg-controls input[type="text"],
+.pg-controls input:not([type]),
+.pg-controls select {
+  background: #080d0e;
+  border: 1px solid #1e3236;
+  color: #c8d6d8;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font: inherit;
+}
+
+.pg-controls input[type="range"] {
+  accent-color: #7ee2a8;
+}
+
+.pg-check {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 8px !important;
+}
+
+.pg-check input {
+  accent-color: #7ee2a8;
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScrambleType · plain HTML (Web Component)</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 48px 24px;
+        font-family: ui-monospace, SFMono-Regular, Consolas, Menlo, monospace;
+        background: #0a0f10;
+        color: #c8d6d8;
+      }
+      h1 {
+        color: #7ee2a8;
+        letter-spacing: 3px;
+        text-shadow: 0 0 18px rgba(126, 226, 168, 0.45);
+      }
+      section {
+        max-width: 720px;
+        margin: 0 auto 32px;
+        border: 1px solid #1e3236;
+        border-radius: 10px;
+        padding: 20px;
+        background: #0d1517;
+      }
+      h2 {
+        font-size: 13px;
+        color: #5f7477;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 2;
+        margin: 6px 0;
+      }
+      button {
+        background: #12262a;
+        color: #9fd6b5;
+        border: 1px solid #1e3236;
+        border-radius: 6px;
+        padding: 6px 14px;
+        font: inherit;
+        cursor: pointer;
+      }
+      #log {
+        font-size: 12px;
+        color: #46585b;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ScrambleType · Web Component</h1>
+
+    <section>
+      <h2>basic</h2>
+      <p><scramble-text text="ACCESS GRANTED" speed="24"></scramble-text></p>
+      <p><scramble-text text="中文文本解码 · ZERO LAYOUT SHIFT" speed="22" delay="400"></scramble-text></p>
+      <p><scramble-text text="custom glyphs: ABCDEF" glyphs="ABCDEF#%" speed="26" churn="5,10"></scramble-text></p>
+      <button onclick="document.querySelectorAll('scramble-text').forEach((el) => el.replay())">replay all</button>
+    </section>
+
+    <section>
+      <h2>events &amp; methods</h2>
+      <p><scramble-text id="ev-demo" text="SCRAMBLE-DONE EVENT" speed="28"></scramble-text></p>
+      <p id="log">waiting for scramble-done …</p>
+      <button onclick="document.getElementById('ev-demo').skip()">skip()</button>
+      <button onclick="document.getElementById('ev-demo').replay()">replay()</button>
+    </section>
+
+    <!-- 本地开发经 vite alias 引源码；发布后用户写法：import "scramble-type/wc" 或 CDN -->
+    <script type="module">
+      import "scramble-type/wc";
+
+      const demo = document.getElementById("ev-demo");
+      demo.addEventListener("scramble-done", () => {
+        document.getElementById("log").textContent = "✔ scramble-done fired at " + new Date().toLocaleTimeString();
+      });
+    </script>
+  </body>
+</html>
