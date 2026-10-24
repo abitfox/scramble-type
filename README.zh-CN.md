@@ -17,6 +17,10 @@
 
 文本从左到右依序"落定"，每个字符落定前以随机乱码符号跳动——有质感的"解码波"，为终端 / 黑客风 / 科幻 UI 而生。
 
+<div align="center">
+  <img src="assets/demo.gif" alt="ScrambleType 解码动画" width="720" />
+</div>
+
 ```tsx
 import { ScrambleText } from "scramble-type";
 
@@ -32,6 +36,12 @@ import { ScrambleText } from "scramble-type";
 - **可控制** — `onDone` / `onTick` 回调；ref 暴露 `replay()` / `skip()`；`delay` 实现多行错峰。
 - **可选打字音** — WebAudio 纯合成，无音频资源、无配置文件。
 - **类型完整** — 全量 TypeScript 类型。
+
+## 截图预览
+
+| React playground（实时调参） | 纯 HTML · Web Component |
+| --- | --- |
+| ![React playground](assets/playground.png) | ![纯 HTML Web Component](assets/plain-html.png) |
 
 ## 安装
 

@@ -19,6 +19,10 @@
 
 Text resolves from left to right, and every character jitters through random glyphs before it locks in — a "decoding wave" with real texture, made for terminal / hacker / sci-fi UIs.
 
+<div align="center">
+  <img src="assets/demo.gif" alt="ScrambleType decode animation" width="720" />
+</div>
+
 ```tsx
 import { ScrambleText } from "scramble-type";
 
@@ -34,6 +38,12 @@ import { ScrambleText } from "scramble-type";
 - **Controllable** — `onDone` / `onTick` callbacks, `replay()` / `skip()` via ref, stagger multi-line with `delay`.
 - **Optional typing sound** — a synthesized WebAudio tick with no audio assets and no config files.
 - **Typed** — full TypeScript definitions shipped.
+
+## Screenshots
+
+| React playground (live prop controls) | Plain HTML · Web Component |
+| --- | --- |
+| ![React playground](assets/playground.png) | ![Plain HTML Web Component](assets/plain-html.png) |
 
 ## Install
 

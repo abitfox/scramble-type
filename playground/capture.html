@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>capture</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 64px;
+        font-family: ui-monospace, SFMono-Regular, Consolas, Menlo, monospace;
+        background: #0a0f10;
+        color: #c8d6d8;
+      }
+      .l1 {
+        font-size: 44px;
+        letter-spacing: 4px;
+        color: #7ee2a8;
+        text-shadow: 0 0 22px rgba(126, 226, 168, 0.5);
+      }
+      .l2,
+      .l3 {
+        font-size: 20px;
+        line-height: 2.2;
+        color: #8fb0b5;
+      }
+      .l3 {
+        color: #d9e6e8;
+      }
+      button {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        background: #12262a;
+        color: #9fd6b5;
+        border: 1px solid #1e3236;
+        border-radius: 6px;
+        padding: 6px 14px;
+        font: inherit;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <scramble-text class="l1" text="ACCESS GRANTED" speed="60" churn="4,9"></scramble-text>
+    <scramble-text class="l2" text="> establishing secure channel ... OK" speed="45" delay="300" churn="3,7"></scramble-text>
+    <scramble-text class="l3" text="中文解码 · 零布局跳动 · ScrambleType" speed="50" delay="650" churn="3,8"></scramble-text>
+    <button id="replay">replay</button>
+    <script type="module">
+      import "scramble-type/wc";
+      const replayAll = () =>
+        document.querySelectorAll("scramble-text").forEach((el) => el.replay());
+      window.addEventListener("load", () => setTimeout(replayAll, 400));
+      document.getElementById("replay").addEventListener("click", replayAll);
+    </script>
+  </body>
+</html>
