@@ -199,6 +199,10 @@ prefersReducedMotion()        // SSR 安全的媒体查询助手
 - **后台标签页** — 浏览器对 `setInterval` 降频，动画自动暂停、回前台续播，最终态始终正确。
 - **浏览器** — 常青浏览器（ES2020），不带 polyfill。
 
+## 来源
+
+ScrambleType 诞生于 HackerEnglish 项目。可在 [www.hackerenglish.com](https://www.hackerenglish.com) 观看该特效的实际运行。
+
 ## 开源协议
 
 [MIT](./LICENSE) © ScrambleType Authors

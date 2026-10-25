@@ -201,6 +201,11 @@ Events: `scramble-tick`, `scramble-done` (bubbling). Methods: `replay()`, `skip(
 - **Background tabs** — browsers throttle `setInterval`; the animation pauses and resumes correctly, the final state is always exact.
 - **Browsers** — evergreen browsers (ES2020). No polyfills shipped.
 
+## Origin
+
+ScrambleType was born inside the HackerEnglish project. See the decode effect
+live at [www.hackerenglish.com](https://www.hackerenglish.com).
+
 ## License
 
 [MIT](./LICENSE) © ScrambleType Authors
