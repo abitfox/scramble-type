@@ -15,6 +15,8 @@
 
 ---
 
+> ▶ **在线演示：[www.hackerenglish.com](https://www.hackerenglish.com)** —— 该特效诞生的产品，可现场观看解码波。
+
 文本从左到右依序"落定"，每个字符落定前以随机乱码符号跳动——有质感的"解码波"，为终端 / 黑客风 / 科幻 UI 而生。
 
 <div align="center">
@@ -198,10 +200,6 @@ prefersReducedMotion()        // SSR 安全的媒体查询助手
 - **Emoji / ZWJ 组合序列** — 组合 emoji 可能被拆散成乱码块（按 Unicode 码点迭代）。此类文本建议静态直出（`maxChars={0}`）。
 - **后台标签页** — 浏览器对 `setInterval` 降频，动画自动暂停、回前台续播，最终态始终正确。
 - **浏览器** — 常青浏览器（ES2020），不带 polyfill。
-
-## 来源
-
-ScrambleType 诞生于 HackerEnglish 项目。可在 [www.hackerenglish.com](https://www.hackerenglish.com) 观看该特效的实际运行。
 
 ## 开源协议
 

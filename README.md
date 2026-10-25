@@ -17,6 +17,8 @@
 
 ---
 
+> ▶ **Live product: [www.hackerenglish.com](https://www.hackerenglish.com)** — the app this effect was born in. See the decode wave in action.
+
 Text resolves from left to right, and every character jitters through random glyphs before it locks in — a "decoding wave" with real texture, made for terminal / hacker / sci-fi UIs.
 
 <div align="center">
@@ -200,11 +202,6 @@ Events: `scramble-tick`, `scramble-done` (bubbling). Methods: `replay()`, `skip(
 - **Emoji / ZWJ sequences** — combined emoji may be split into scrambled chunks (chars are iterated with `Array.from`, i.e. per code point). Keep such text out of scope or render it statically (`maxChars={0}`).
 - **Background tabs** — browsers throttle `setInterval`; the animation pauses and resumes correctly, the final state is always exact.
 - **Browsers** — evergreen browsers (ES2020). No polyfills shipped.
-
-## Origin
-
-ScrambleType was born inside the HackerEnglish project. See the decode effect
-live at [www.hackerenglish.com](https://www.hackerenglish.com).
 
 ## License
 
